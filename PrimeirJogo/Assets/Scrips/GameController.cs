@@ -17,7 +17,15 @@ public class GameController : MonoBehaviour
   public void UpdateScore(int score)
   {
     totalScore += score;
-    scoreText.text = totalScore.ToString();
+
+    if (totalScore < 10)
+    {
+      scoreText.text = "0" + totalScore.ToString();
+    }
+    else
+    {
+      scoreText.text = totalScore.ToString();
+    }
   }
 
 }
